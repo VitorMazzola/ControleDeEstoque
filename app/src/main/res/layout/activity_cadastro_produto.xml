@@ -4,13 +4,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-
-    <EditText
-        android:id="@+id/editTextNomeProduto"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nome do Produto"/>
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imageViewFoto"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/ic_launcher_shop"/>
+
+        <EditText
+            android:id="@+id/editTextNomeProduto"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:hint="Nome do Produto"
+            android:gravity="bottom"/>
+    </LinearLayout>
 
     <EditText
         android:id="@+id/editTextDescricaoDoProduto"
