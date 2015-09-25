@@ -69,7 +69,7 @@ public final class CadastroProdutoContract {
             produto.setDescricao(cursor.getString(cursor.getColumnIndex(CadastroProdutoContract.DESCRICAO)));
             produto.setQuantidade(cursor.getLong(cursor.getColumnIndex(CadastroProdutoContract.QUANTIDADE)));
             produto.setQuantidadeMinima(cursor.getLong(cursor.getColumnIndex(CadastroProdutoContract.QUANTIDADE_MINIMA)));
-            produto.setValor(cursor.getLong(cursor.getColumnIndex(CadastroProdutoContract.VALOR)));
+            produto.setValor(cursor.getDouble(cursor.getColumnIndex(CadastroProdutoContract.VALOR)));
 
             return produto;
         }

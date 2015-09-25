@@ -70,27 +70,29 @@ public class CadastroProdutoActivity extends AppCompatActivity{
 
 
     private void bindProduto() {
-
         produto.setNome(editTextNome.getText().toString());
         produto.setDescricao(editTextDescricao.getText().toString());
-        //produto.setQuantidade(editTextQuantidade.getText().toString());
-        //produto.setQuantidadeMinima(editTextQuantidadeMinima.getText().toString());
-        //produto.setValor(editTextValor.getText().toString());
+        produto.setQuantidade(Long.parseLong(editTextQuantidade.getText().toString()));
+        produto.setQuantidadeMinima(Long.parseLong(editTextQuantidadeMinima.getText().toString()));
+        produto.setValor(Double.parseDouble(editTextValor.getText().toString()));
 
     }
 
 
     private void bindEditTextValor() {
         editTextValor = (EditText) findViewById(R.id.editTextValor);
+        editTextValor.setText(produto.getValor() == null ? "" : produto.getValor().toString());
     }
 
 
     private void bindEditTextQuantidadeMinima() {
         editTextQuantidadeMinima = (EditText) findViewById(R.id.editTextQuantidadeMinima);
+        editTextQuantidadeMinima.setText(produto.getQuantidadeMinima() == null ? "" : produto.getQuantidadeMinima().toString());
     }
 
     private void bindEditTextQuantidade() {
         editTextQuantidade = (EditText) findViewById(R.id.editTextQuantidade);
+        editTextQuantidade.setText(produto.getQuantidade() == null ? "" : produto.getQuantidade().toString());
     }
 
     private void bindEditTextDescricao() {

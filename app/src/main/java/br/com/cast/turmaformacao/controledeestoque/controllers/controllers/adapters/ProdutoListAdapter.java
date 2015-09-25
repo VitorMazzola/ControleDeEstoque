@@ -45,9 +45,19 @@ public class ProdutoListAdapter extends BaseAdapter{
 
         View produtoListItemView = context.getLayoutInflater().inflate(R.layout.list_item_produto, parent, false);
 
+
         TextView textViewNome = (TextView) produtoListItemView.findViewById(R.id.textViewNome);
+        TextView textViewDescricao = (TextView) produtoListItemView.findViewById(R.id.textViewDescricao);
+        TextView textViewQuantidade = (TextView) produtoListItemView.findViewById(R.id.textViewQuantidade);
+        TextView textViewQuantidadeMinima = (TextView) produtoListItemView.findViewById(R.id.textViewQuantidadeMinima);
+        TextView textViewValor = (TextView) produtoListItemView.findViewById(R.id.textViewValor);
 
         textViewNome.setText(produto.getNome());
+        textViewDescricao.setText(produto.getDescricao());
+        textViewQuantidade.setText(produto.getQuantidade().toString());
+        textViewQuantidadeMinima.setText(produto.getQuantidadeMinima().toString());
+        String moeda = "R$ ";
+        textViewValor.setText(moeda + produto.getValor().toString());
 
 
         return produtoListItemView;

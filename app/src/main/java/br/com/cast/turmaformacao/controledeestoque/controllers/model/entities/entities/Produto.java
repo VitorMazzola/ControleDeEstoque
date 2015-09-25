@@ -12,7 +12,7 @@ public class Produto implements Parcelable{
     private String descricao;
     private Long quantidade;
     private Long quantidadeMinima;
-    private double valor;
+    private Double valor;
 
     public Produto(){
         super();
@@ -72,11 +72,11 @@ public class Produto implements Parcelable{
     }
 
 
-    public double getValor() {
+    public Double getValor() {
         return valor;
     }
 
-    public void setValor(double valor) {
+    public void setValor(Double valor) {
         this.valor = valor;
     }
 
