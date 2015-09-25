@@ -52,11 +52,15 @@ public class ProdutoListAdapter extends BaseAdapter{
         TextView textViewQuantidadeMinima = (TextView) produtoListItemView.findViewById(R.id.textViewQuantidadeMinima);
         TextView textViewValor = (TextView) produtoListItemView.findViewById(R.id.textViewValor);
 
-        textViewNome.setText(produto.getNome());
-        textViewDescricao.setText(produto.getDescricao());
-        textViewQuantidade.setText(produto.getQuantidade().toString());
-        textViewQuantidadeMinima.setText(produto.getQuantidadeMinima().toString());
-        String moeda = "R$ ";
+        String nome = "Nome do Produto: ";
+        textViewNome.setText(nome + produto.getNome());
+        String desc = "Descricao: ";
+        textViewDescricao.setText(desc + produto.getDescricao());
+        String qntde = "Quantidade: ";
+        textViewQuantidade.setText(qntde + produto.getQuantidade().toString());
+        String qntdeMin = "Quantidade Minima: ";
+        textViewQuantidadeMinima.setText(qntdeMin + produto.getQuantidadeMinima().toString());
+        String moeda = "Valor Unitario: R$ ";
         textViewValor.setText(moeda + produto.getValor().toString());
 
 
